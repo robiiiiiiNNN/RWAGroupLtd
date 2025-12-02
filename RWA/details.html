@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listing Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e3d5ef4e0a.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #eee;">
+    <style>
+        .nav-item a {
+            color: #242424;
+        }
+    </style>
+
+    <div class="nav-wrapper" id="nav">
+        <div class="apartment-dropdown" id="apartment-dropdown"></div>
+        <nav>
+            <div class="nav-logo">
+                <svg width="150" viewBox="0 0 582 308" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path style="animation-delay: 0;" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M207.798 66.25L142.282 132.5L150.891 132.808L159.5 133.116L180.359 111.808C191.832 100.089 217.582 74.061 237.582 53.97L273.946 17.44L331.72 75.22L389.494 133H398.491H407.487L377.744 103.244L348 73.488V53.744V34H341.5H335V47.244V60.488L304.744 30.244C288.103 13.61 274.224 0 273.901 0C273.578 0 243.832 29.813 207.798 66.25ZM0 224.431V307H8.5H17V232.5V158L38.75 158.006C50.713 158.009 63.149 158.445 66.387 158.976C74.361 160.282 83.628 164.812 88.647 169.859C102.052 183.339 101.748 208.543 88.025 221.38C78.39 230.392 69.822 233 49.844 233C38.694 233 36.869 233.217 37.357 234.488C37.671 235.307 50.207 251.954 65.214 271.483L92.5 306.989L102.75 306.995C108.387 306.998 113 306.762 113 306.471C113 306.181 110.65 302.918 107.779 299.221C77.093 259.718 68.083 247.674 68.596 246.844C68.929 246.307 69.409 246.075 69.663 246.33C70.633 247.3 82.282 243.887 88.2 240.899C95.243 237.344 105.068 228.444 108.599 222.42C113.764 213.61 115.281 207.322 115.336 194.5C115.381 184.195 115.056 181.653 113.038 176.5C108.115 163.934 100.375 155.395 88.684 149.632C75.056 142.914 73.265 142.668 34.75 142.244L0 141.861V224.431ZM168 142.631C168 143.494 176.128 172.29 188.709 216C194.487 236.075 202.704 264.65 206.968 279.5L214.722 306.5L226.284 306.781C236.646 307.033 237.901 306.877 238.384 305.281C239.092 302.939 265.273 205.432 269.924 187.815C271.911 180.288 273.774 173.893 274.063 173.604C274.352 173.315 276.543 180.373 278.931 189.289C281.32 198.205 284.732 210.9 286.513 217.5C289.711 229.352 306.806 291.546 309.678 301.782L311.161 307.064L322.263 306.782L333.366 306.5L341.097 280.5C345.349 266.2 354.252 235.825 360.882 213C367.512 190.175 374.75 165.461 376.968 158.081C379.186 150.7 381 144.045 381 143.292C381 142.216 379.154 141.984 372.399 142.211L363.799 142.5L344.07 211.5C333.218 249.45 323.996 281.85 323.574 283.5L322.808 286.5L321.479 283C320.748 281.075 316.548 266.675 312.146 251C307.744 235.325 300.093 208.1 295.144 190.5C290.195 172.9 285.138 154.77 283.905 150.211L281.665 141.922L274.145 142.211L266.625 142.5L265.439 147C262.628 157.662 229.79 276.158 227.75 283L226.408 287.5L224.618 281C222.73 274.142 216.765 252.839 209.499 227C207.102 218.475 202.673 202.725 199.657 192C196.641 181.275 192.272 165.637 189.948 157.25L185.723 142H176.861C171.988 142 168 142.284 168 142.631ZM481.233 163.25C472.053 184.571 459.649 213.217 435.008 270C427.728 286.775 421.143 301.962 420.373 303.75L418.973 307H428.336H437.699L442.457 295.75C445.074 289.563 450.378 277.188 454.243 268.25L461.271 252H500.402H539.533L551.184 279.25L562.834 306.5L572.365 306.786L581.897 307.071L574.342 289.786C570.188 280.279 563.75 265.525 560.036 257C556.323 248.475 543.943 220.125 532.526 194C521.109 167.875 511.381 145.488 510.909 144.25C510.098 142.127 509.492 142 500.216 142H490.383L481.233 163.25ZM501 160.958C501 161.485 508.018 178.247 516.595 198.208C525.172 218.169 532.42 235.063 532.702 235.75C533.105 236.735 526.221 237 500.216 237H467.218L477.913 211.75C483.796 197.863 491.059 180.547 494.055 173.272C498.857 161.607 501 157.807 501 160.958Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html">Homepage</a>
+                </div>
+                <div class="nav-item" id="apartment-dropdown-hover">
+                    <a href="#">Apartments <i class="fa-solid fa-chevron-down"></i></a>
+                </div>
+                <div class="nav-item" id="house-dropdown-hover">
+                    <a href="#">Houses <i class="fa-solid fa-chevron-down"></i></a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" id="contact">Contact RWA</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="liked.html" id="liked-nav-item">
+                    My Liked Listings
+                    <i class="fa-solid fa-heart" style="margin-left: 10px;"></i>
+
+                    <div class="notification" id="notification"></div>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="details"></div>
+
+    <script>
+        async function loadDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get("id"));
+
+            const response = await fetch("apartments.json");
+            const listings = await response.json();
+
+            const item = listings.find(l => l.id === id);
+
+            if (!item) {
+                document.getElementById("details").innerHTML = "<h2>Listing not found</h2>";
+                return;
+            }
+
+            document.title = item.title;
+
+            document.getElementById("details").innerHTML = `
+    <div style="display: flex; margin-top: 0; align-items: center; justify-content: space-between;">
+        <h1>${item.title}</h1>
+        <div>
+            <span id="save"><i class="fa-regular fa-heart"></i> Save</span>
+            <span id="share"><i class="fa-solid fa-arrow-up-right-from-square"></i> Share</span>
+        </div>
+    </div>
+
+    <div style="width: 100%; height: 450px; display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 30px;">
+    <div>
+        <img src="${item.cover}" class="cover-img">
+    </div>
+
+    <div id="gallery-grid" class="gallery-grid"></div>
+    </div>
+
+    <div class="details-container">
+        <div class="details-item">
+            <span class="details-item-number">${item.sqm}</span><br>
+            <span class="details-item-text">m²</span>
+        </div>
+        <div class="details-item">
+            <span class="details-item-number">${item.bedrooms}</span><br>
+            <span class="details-item-text">rooms</span>
+        </div>
+        <div class="details-item">
+            <span class="details-item-number">${item.bathrooms}</span><br>
+            <span class="details-item-text">bathrooms</span>
+        </div>
+        <div class="details-item">
+            <span class="details-item-number">${item.floors}</span><br>
+            <span class="details-item-text">floors</span>
+        </div>
+        <div class="details-item">
+            <span class="details-item-number">€${item.price}</span><br>
+            <span class="details-item-text">price</span>
+        </div>
+    </div>
+`;
+
+            const gallery = document.getElementById("gallery-grid");
+
+            item.images.forEach((img, index) => {
+                const image = document.createElement("img");
+                image.src = img;
+                image.classList.add("gallery-img");
+                gallery.appendChild(image);
+            });
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            function addToFavorites(id) {
+                if (!favorites.includes(id)) {
+                    favorites.push(id);
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+                }
+            }
+
+
+
+            const saveBtn = document.getElementById('save');
+            const notification = document.querySelector('.notification');
+
+            saveBtn.addEventListener('click', (e) => {
+                const favoriteId = params.get('id');
+                addToFavorites(favoriteId);
+
+                notification.classList.add('show');
+
+                const heart = document.createElement('span');
+                heart.classList.add('floating-heart');
+                heart.innerHTML = '❤️';
+
+                const rect = saveBtn.getBoundingClientRect();
+                heart.style.left = rect.left + rect.width / 2 + 'px';
+                heart.style.top = rect.top + 'px';
+                document.body.appendChild(heart);
+
+                heart.addEventListener('animationend', () => {
+                    heart.remove();
+                });
+            });
+        }
+        loadDetails();
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
